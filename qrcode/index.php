@@ -22,20 +22,20 @@
     <title>QR code generator</title>
   </head>
   <body>
-  <?php if(isset($dat)){  ?>
+  
+    
+    <div class="container">
+      
+        <?php if(isset($dat)){  ?>
         
         <div class="img ">
-          <img src="<?php echo$dat["img"]?>" width="10%" height="10%" >
+          <img src="<?php echo$dat["img"]?>" width="200%" height="200%" >
         </div>
         
         <?php } ?>
-    
-    <div class="container">
-        <h1 class="text_wrap"> QR Code Generator</h1>
-     
       
     <form class="row  needs-validation"  action="index.php" method="POST">
-   
+    <h1 class="text_wrap"> QR Code Generator</h1>
       
         <div class="col-md-10">
           <label for="validationCustom03" class="form-label ">Data:</label>
@@ -57,10 +57,10 @@
         </div>
         <div class="col-12">
           
-        <div class="col-12">
+        <div class="col-12 mb-3">
           <button class="btn btn-success " type="submit" name="submit">Generate!</button>
         </div>
-     
+        <h6>*Please note that the QR code will be generated only if the data is valid and remember to set the dimension above 200px</h6>
       </div>  
   
       </form>
@@ -81,8 +81,8 @@
         align-items: center;
         margin-top: 100px;
 
-         height: 42vh;
-        width: 500px;
+         height: 55vh;
+        width: 780px;
         box-shadow: -3px 8px 33px -3px rgba(94, 91, 91, 0.75);
         -webkit-box-shadow: -3px 8px 33px -3px rgba(94, 91, 91, 0.75);
         -moz-box-shadow: -3px 8px 33px -3px rgba(94, 91, 91, 0.75);
@@ -96,19 +96,26 @@ background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
       }
       .text_wrap{
         
-        font-size: 35px;
-        margin-left: 5px;
+        font-size: 30px;
+        margin-left: 1px;
       
         
       
         color: white;
       }
       .needs-validation {
-          padding-left: 30px;
+          margin-left: 110px;
       }
       label{
           color: white;
       }
- 
+      .img{
+      
+      }
+   h6{
+        color: white;
+        font-size: 15px;
+        margin-left: 1px;
+   }
   </style>
 </html>
